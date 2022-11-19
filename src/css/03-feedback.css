@@ -6,6 +6,13 @@
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  margin: 0 auto;
+ 
+}
+
+.container-form {
+  position: relative;
+  text-align: center;
 }
 
 .feedback-form label {
