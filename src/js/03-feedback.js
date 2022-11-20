@@ -1,7 +1,7 @@
 import throttle from "lodash.throttle";
 const textInput = document.querySelector(".feedback-form");
 
-textInput.addEventListener("input", throttle((event) => SaveData(event),500)); // Тут проблема, якщо користувач пише більше 500 мс підряд тротл викидає помилку, хз як вирішити
+textInput.addEventListener("input", throttle((event) => SaveData(event),500)); 
 
 const FormFeedback = document.querySelector('.feedback-form');
 FormFeedback.addEventListener('submit', (event) => FormSubmit(event));
