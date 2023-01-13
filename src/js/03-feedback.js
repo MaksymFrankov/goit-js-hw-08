@@ -1,10 +1,7 @@
-import throttle from "lodash.throttle";
+
 const textInput = document.querySelector(".feedback-form");
 
-textInput.addEventListener("input", throttle((event) => SaveData(event), 500)); 
-
-const FormFeedback = document.querySelector('.feedback-form');
-FormFeedback.addEventListener('submit', (event) => FormSubmit(event));
+textInput.addEventListener("input",  SaveData(e)); 
 
 
 let data = JSON.parse(localStorage.getItem('feedback-form-state'));
@@ -13,9 +10,9 @@ if (data)
     FillForm(data);
 }
 
-function SaveData(event)
+function SaveData(e)
 {
-    data[event.target.name] = event.target.value;
+    data[e.target.name] = e.target.value;
     localStorage.setItem('feedback-form-state', JSON.stringify(data));
 }
 

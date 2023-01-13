@@ -11,4 +11,3 @@ if (localStorage.getItem('videoplayer-current-time')) {
     const playerData = JSON.parse(localStorage.getItem('videoplayer-current-time'));
     player.setCurrentTime(playerData.seconds);
 }
-
